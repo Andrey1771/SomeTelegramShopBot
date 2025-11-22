@@ -2,7 +2,7 @@
   "name": "telegram-shop-backend",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "node dist/main.js",
