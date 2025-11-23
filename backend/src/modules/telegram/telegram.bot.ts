@@ -1,9 +1,9 @@
 import { Bot, InlineKeyboard } from 'grammy';
-import { env } from '../../config/env.js';
-import { ProductService } from '../products/product.service.js';
-import { CartService } from '../cart/cart.service.js';
-import { OrderService } from '../orders/order.service.js';
-import { AiService } from '../ai/ai.service.js';
+import { env } from '../../config/env';
+import { ProductService } from '../products/product.service';
+import { CartService } from '../cart/cart.service';
+import { OrderService } from '../orders/order.service';
+import { AiService } from '../ai/ai.service';
 
 export class TelegramBot {
   private readonly bot = new Bot(env.BOT_TOKEN);

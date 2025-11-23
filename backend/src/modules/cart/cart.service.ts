@@ -1,5 +1,5 @@
-import { CartDto, CartItemDto } from '../../common/dtos.js';
-import { ProductService } from '../products/product.service.js';
+import { CartDto, CartItemDto } from '../../common/dtos';
+import { ProductService } from '../products/product.service';
 
 const carts = new Map<string, CartDto>();
 const productService = new ProductService();

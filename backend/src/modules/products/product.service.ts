@@ -1,4 +1,4 @@
-import { ProductDto } from '../../common/dtos.js';
+import { ProductDto } from '../../common/dtos';
 
 const mockProducts: ProductDto[] = [
   {

@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { env } from '../../config/env.js';
-import { AiMessageDto } from '../../common/dtos.js';
+import { env } from '../../config/env';
+import { AiMessageDto } from '../../common/dtos';
 
 export class AiService {
   async respond(message: AiMessageDto) {

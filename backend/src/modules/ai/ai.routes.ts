@@ -1,5 +1,5 @@
 import { Application } from 'express';
-import { AiService } from './ai.service.js';
+import { AiService } from './ai.service';
 
 const aiService = new AiService();
 

@@ -1,5 +1,5 @@
-import { CartService } from '../cart/cart.service.js';
-import { OrderDto } from '../../common/dtos.js';
+import { CartService } from '../cart/cart.service';
+import { OrderDto } from '../../common/dtos';
 
 const orders = new Map<string, OrderDto>();
 let counter = 1;

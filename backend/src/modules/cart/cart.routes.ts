@@ -1,5 +1,5 @@
 import { Application } from 'express';
-import { CartService } from './cart.service.js';
+import { CartService } from './cart.service';
 
 const cartService = new CartService();
 

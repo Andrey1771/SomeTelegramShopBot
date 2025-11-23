@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import crypto from 'crypto';
-import { UserDto } from '../../common/dtos.js';
+import { UserDto } from '../../common/dtos';
 
 const telegramAuthSchema = z.object({
   hash: z.string(),

@@ -1,5 +1,5 @@
 import { Application } from 'express';
-import { PaymentService, PaymentProvider } from './payment.service.js';
+import { PaymentService, PaymentProvider } from './payment.service';
 
 const paymentService = new PaymentService();
 

@@ -1,5 +1,5 @@
 import { Application } from 'express';
-import { OrderService } from './order.service.js';
+import { OrderService } from './order.service';
 
 const orderService = new OrderService();
 const resolveUserId = (req: any) => (req.headers['x-user-id'] as string) ?? 'demo-user';

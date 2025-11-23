@@ -1,6 +1,6 @@
-import { createHttpServer } from './http/server.js';
-import { env } from './config/env.js';
-import { TelegramBot } from './modules/telegram/telegram.bot.js';
+import { createHttpServer } from './http/server';
+import { env } from './config/env';
+import { TelegramBot } from './modules/telegram/telegram.bot';
 
 const app = createHttpServer();
 app.listen(env.PORT, () => {

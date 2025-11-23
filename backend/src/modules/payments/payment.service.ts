@@ -1,4 +1,4 @@
-import { OrderService } from '../orders/order.service.js';
+import { OrderService } from '../orders/order.service';
 
 export type PaymentProvider = 'yookassa' | 'stripe' | 'crypto';
 
