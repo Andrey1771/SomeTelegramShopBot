@@ -1,6 +1,21 @@
-import dotenv from 'dotenv';
+import fs from 'fs';
+import path from 'path';
 
-dotenv.config();
+const envPath = path.resolve(process.cwd(), '.env');
+if (fs.existsSync(envPath)) {
+  const content = fs.readFileSync(envPath, 'utf-8');
+  content
+    .split(/\r?\n/) // handle LF/CRLF
+    .filter((line) => line.trim() && !line.trim().startsWith('#'))
+    .forEach((line) => {
+      const [rawKey, ...rest] = line.split('=');
+      const key = rawKey.trim();
+      const value = rest.join('=').trim();
+      if (key && process.env[key] === undefined) {
+        process.env[key] = value;
+      }
+    });
+}
 
 export interface EnvConfig {
   PORT: number;
