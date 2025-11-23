@@ -25,7 +25,7 @@ npm run dev
 
 ### Переменные окружения backend
 Пример файла `.env` находится в `docs/env.example`. Основные переменные:
-- `BOT_TOKEN` — токен Telegram-бота
+- `BOT_TOKEN` — токен Telegram-бота (если не указан, HTTP API поднимется без запуска бота)
 - `DATABASE_URL` — строка подключения PostgreSQL
 - `TELEGRAM_WEBAPP_URL` — URL размещённого WebApp
 - `AI_API_URL`, `AI_API_KEY` — настройки AI-провайдера

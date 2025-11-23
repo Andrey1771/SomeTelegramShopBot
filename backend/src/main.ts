@@ -7,7 +7,11 @@ app.listen(env.PORT, () => {
   console.log(`HTTP server listening on port ${env.PORT}`);
 });
 
-const bot = new TelegramBot();
-bot.launch().catch((err) => {
-  console.error('Failed to launch Telegram bot', err);
-});
+if (env.BOT_TOKEN) {
+  const bot = new TelegramBot(env.BOT_TOKEN);
+  bot.launch().catch((err) => {
+    console.error('Failed to launch Telegram bot', err);
+  });
+} else {
+  console.warn('Skipping Telegram bot launch because BOT_TOKEN is not set.');
+}

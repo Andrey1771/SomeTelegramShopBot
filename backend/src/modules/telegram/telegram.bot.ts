@@ -6,13 +6,14 @@ import { OrderService } from '../orders/order.service';
 import { AiService } from '../ai/ai.service';
 
 export class TelegramBot {
-  private readonly bot = new Bot(env.BOT_TOKEN);
+  private readonly bot: Bot;
   private readonly productService = new ProductService();
   private readonly cartService = new CartService();
   private readonly orderService = new OrderService();
   private readonly aiService = new AiService();
 
-  constructor() {
+  constructor(token: string) {
+    this.bot = new Bot(token);
     this.registerHandlers();
   }
 
